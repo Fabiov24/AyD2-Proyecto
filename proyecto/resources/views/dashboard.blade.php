@@ -15,10 +15,8 @@
             @if(isset($catedraticos))
             @foreach($catedraticos as $catedratico)
             <tr>
-                <td> {{ $catedratico->Dpi }} </td>
-                <td> {{ $catedratico->Nombre }} </td>
-                <td> {{ $catedratico->Curso }} </td>
-                <td> {{ $catedratico->Likes }} </td>
+                <td> {{ $catedratico->codigo }} </td>
+                <td> {{ $catedratico->nombre }} </td>
             @endforeach
             @endif
         </tbody>

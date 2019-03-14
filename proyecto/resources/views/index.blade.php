@@ -12,6 +12,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Hilos <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -38,40 +39,4 @@
   </div>
 </nav>
 
-
-
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Carnet</th>
-                <th>Nombre</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr>
-                <td> 201403602 </td>
-                <td> Fabio César De Paz Vásquez </td>
-            </tr>
-
-            <tr>
-                <td> 201404262 </td>
-                <td> José David Rodriguez Hernandez </td>
-            </tr>
-
-            <tr>
-                <td> 201404423 </td>
-                <td> Jairo Pablo Hernández Guzmán </td>
-            </tr>
-
-            <tr>
-                <td> 201403762</td>
-                <td> Kevin Alberto Morán Orellana</td>
-            </tr>
-
-
-
-        </tbody>
-    </table>
-
+ @include('dashboard')
