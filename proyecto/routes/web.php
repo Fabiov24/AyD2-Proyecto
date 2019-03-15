@@ -11,3 +11,4 @@
 |
 */
 Route::get('/', 'IndexController@index');
+Route::get('/catedraticos', 'CatedraticoController@index');

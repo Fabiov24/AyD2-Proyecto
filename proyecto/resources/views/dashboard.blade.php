@@ -5,20 +5,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Dpi</th>
-                <th>Nombre</th>
-                <th>Curso</th>
-                <th>Numero de Likes</th>
+                <th>Codigo</th>
+                <th>Nombre</th>                
             </tr>
         </thead>
         <tbody>
             @if(isset($catedraticos))
             @foreach($catedraticos as $catedratico)
             <tr>
-                <td> {{ $catedratico->Dpi }} </td>
+                <td> {{ $catedratico->codigo }} </td>
                 <td> {{ $catedratico->Nombre }} </td>
-                <td> {{ $catedratico->Curso }} </td>
-                <td> {{ $catedratico->Likes }} </td>
             @endforeach
             @endif
         </tbody>
