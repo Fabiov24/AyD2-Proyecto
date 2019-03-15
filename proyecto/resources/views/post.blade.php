@@ -36,31 +36,8 @@
     </form>
   </div>
 </nav>
-<h1>My Posts</h1>
-{{--  <div class="table-responsive">  --}}
-       
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Curso</th>
-                <th>Catedratico</th>                
-                <th>Usuario</th>                
-                <th>Contenido</th>                
-                <th>Ver Post</th>                
-            </tr>
-        </thead>
-        <tbody>
-            @if(isset($posts))
-            @foreach($posts as $post)
-            
-            <tr>
-                <td> {{ $post->curso }} </td>
-                <td> {{ $post->catedratico }} </td>
-                <td> {{ $post->usuario }} </td>
-                <td> {{ $post->post }} </td>
-                <td> <a href="post/{{ $post->id }}" class="btn btn-primary">Ver post  </a> </td>
-            @endforeach
-            @endif
-        </tbody>
-    </table>
-{{--  </div>  --}}
+<h1>{{ $post->curso }} </h1>
+<h2>{{ $post->catedratico }} </h2>
+<h4>Autor:  {{ $post->usuario }} </h4>
+
+<p>{{ $post->post }}</p>

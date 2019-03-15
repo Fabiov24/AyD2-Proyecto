@@ -14,4 +14,24 @@ class MyPostsController extends Controller
       'posts' => $posts]);
         // $data['posts'] = $posts;
     }
+
+    public function show($id) {
+   
+        
+        $post = DB::table('post')
+            ->join('usuario', 'post.id_usuario', '=', 'usuario.carnet')
+            ->join('curso', 'post.id_curso', '=', 'curso.codigo')
+            ->join('catedratico', 'post.id_catedratico', '=', 'catedratico.codigo')
+            ->select('catedratico.nombre as catedratico', 'usuario.nombre as usuario', 'curso.nombre as curso', 'id', 'post')
+            ->where('id','=',$id)
+            ->first();
+        // print_r($post);
+        if($post == null)
+            return 'No existe el post';
+        else {
+            $data['post'] = $post;
+            return view('post', [
+                'post' => $post]);
+        }
+     }
 }
