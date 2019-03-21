@@ -1,3 +1,4 @@
+
 @extends('layout')
 @section('title', 'Dashboard')
 @section('header')
@@ -10,6 +11,7 @@
             <tr>
                 <th>Codigo</th>
                 <th>Nombre</th>                
+                <th>Posts</th>
             </tr>
         </thead>
         <tbody>
@@ -17,10 +19,15 @@
             @foreach($catedraticos as $catedratico)
             <tr>
                 <td> {{ $catedratico->codigo }} </td>
-                <td> {{ $catedratico->Nombre }} </td>
+                <td> {{ $catedratico->nombre }} </td>
+                <td> {{ $catedratico->total }} </td>
             @endforeach
             @endif
         </tbody>
     </table>
 {{--  </div>  --}}
+
+{{ $catedraticos->links() }}
+
 @endsection
+
