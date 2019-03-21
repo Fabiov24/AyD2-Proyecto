@@ -12,3 +12,5 @@
 */
 Route::get('/', 'IndexController@index');
 Route::get('/catedraticos', 'CatedraticoController@index');
+Route::get('/posts', 'PostsController@index');
+Route::get('/topcatedraticos', 'TopCatedraticoController@index');
