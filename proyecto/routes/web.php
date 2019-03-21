@@ -10,11 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
-Route::get('/', 'EstudianteController@index');
-=======
+
 Route::get('/', 'IndexController@index');
 Route::get('/catedraticos', 'CatedraticoController@index');
 Route::get('/posts', 'PostsController@index');
 Route::get('/topcatedraticos', 'TopCatedraticoController@index');
->>>>>>> origin/historia2
+
