@@ -16,3 +16,5 @@ Route::get('/catedraticos', 'CatedraticoController@index');
 Route::get('/posts', 'PostsController@index');
 Route::get('/topcatedraticos', 'TopCatedraticoController@index');
 Route::get('/comentario/{id}/{mensaje}', 'PostsController@edit');
+Route::get('/edit_post/{id}', 'PostsController@editpost');
+Route::post('/edit_post/post/{id}', 'PostsController@update_post');
