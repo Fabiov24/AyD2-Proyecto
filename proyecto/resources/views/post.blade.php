@@ -13,17 +13,17 @@
         <button type="button" class="close" aria-hidden="true">&times;</button>
     </div>
     <div class="commentBox">
-        
+
         <p class="taskDescription">{{$post->post}}</p>
     </div>
     <div class="actionBox">
 
-    
-        
+
+
         <ul class="commentList">
         @if(isset($comentarios))
             @foreach($comentarios as $comentario)
-            
+
                 @if($comentario->post == $post->id)
                     <li>
                         <div class="commenterImage">
@@ -40,11 +40,14 @@
                             <a id="DN{{ $comentario->id }}" class="btn btn-success ocultar boton-editar_done" style="font-size: 0.7rem; padding: 0.2rem 0.4rem;" id_comentario="{{ $comentario->id }}" >
                                 Done
                             </a>
-                    </li>        
+                    </li>
                 @endif
             @endforeach
         @endif
         </ul>
+        <form class="form-inline" role="form">
+         <a href="edit_post/{{$post->id}}" class="btn btn-info">editar post</a>
+        </form>
         <form class="form-inline" role="form">
             <div class="form-group">
                 <input class="form-control" type="text" placeholder="Comenta algo..." />
@@ -56,7 +59,7 @@
     </div>
 </div>
 
-                
+
             @endforeach
             {{ $posts->links() }}
             @endif
@@ -100,9 +103,9 @@
         });
     });
     function enviarEditar(){
-        
+
     }
 
-    
+
 </script>
 @endsection
