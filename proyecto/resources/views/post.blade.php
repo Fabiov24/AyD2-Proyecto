@@ -48,14 +48,17 @@
         <form class="form-inline" role="form">
          <a href="edit_post/{{$post->id}}" class="btn btn-info">editar post</a>
         </form>
+        {!! Form::open(['url' => 'posts/add_coment']) !!}
         <form class="form-inline" role="form">
+              <input type="hidden" name="post" value="{{$post->id}}" />
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Comenta algo..." />
+                <input class="form-control" type="text" name="comentario" placeholder="Comenta algo..." />
             </div>
             <div class="form-group">
-                <button class="btn btn-default">Add</button>
+                {!! Form::submit('Add',['class' => 'btn btn-default']) !!}
             </div>
         </form>
+        {!! Form::close() !!}
     </div>
 </div>
 
