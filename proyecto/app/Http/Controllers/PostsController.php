@@ -44,4 +44,33 @@ class PostsController extends Controller
                ->update(['post' => $request->mi_post]);
       return redirect('/posts');
     }
+
+    public function add_coment(Request $request){
+      $idcoment=\DB::table('comentario')->select('id')->orderBy('id', 'desc')->first();
+      $estudiante = \DB::table('usuario')->select('carnet')->first();
+      \DB::table('comentario')
+             ->insert(['id' => ($idcoment->id+1),
+             'post' => $request->post,
+             'usuario' => $estudiante->carnet,
+             'nombre' => $request->comentario]);
+
+      return redirect('/posts');
+    }
+
+    public function newPost(){
+      return view('newposts');
+    }
+
+    public function add_post(Request $request){
+      $idpost=\DB::table('post')->select('id')->orderBy('id', 'desc')->first();
+      $estudiante = \DB::table('usuario')->select('carnet')->first();
+      \DB::table('post')
+             ->insert(['id' => ($idpost->id+1),
+             'id_curso' => $request->curso,
+             'id_catedratico' => $request->catedratico,
+             'id_usuario' => $estudiante->carnet,
+             'post' => $request->comentario]);
+
+      return redirect('/posts');
+    }
 }

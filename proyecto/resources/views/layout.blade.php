@@ -83,7 +83,7 @@ Html::script('javascripts/bootstrap.min.js') !!}
 </style>
 </head>
 <body>
-        
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="{{url('/')}}">Course Rank USAC</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,10 +103,13 @@ Html::script('javascripts/bootstrap.min.js') !!}
           <li class="nav-item">
             <a class="nav-link" href="{{url('/myposts')}}">My Posts</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/newposts')}}">Crear Post</a>
+          </li>
 
         </ul>
       </div>
-    </nav>     
+    </nav>
         <!--================End Menu Area =================-->
 
 
@@ -117,11 +120,10 @@ Html::script('javascripts/bootstrap.min.js') !!}
 
         <!--================Footer Area =================-->
         <footer class="footer_area">
-            
+
         </footer>
         @push('scripts')
           <script src="javascripts/bootstrap.min.js"></script>
         @endpush
     </body>
 </html>
-
