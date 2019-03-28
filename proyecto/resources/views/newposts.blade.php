@@ -10,6 +10,7 @@
 <div class="col-md-8 col-sm-8 col-xs-12"  align="center">
 
 {!! Form::open(['url' => 'posts/add_post']) !!}
+@csrf
 <div class="form-group">
     <input class="form-control" type="text" name="curso" placeholder="id del curso..." />
 </div>

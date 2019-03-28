@@ -49,6 +49,7 @@
          <a href="edit_post/{{$post->id}}" class="btn btn-info">editar post</a>
         </form>
         {!! Form::open(['url' => 'posts/add_coment']) !!}
+        @csrf
         <form class="form-inline" role="form">
               <input type="hidden" name="post" value="{{$post->id}}" />
             <div class="form-group">
