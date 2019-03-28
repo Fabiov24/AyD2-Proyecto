@@ -19,11 +19,17 @@ class PostsController extends Controller
       $comentarios = 
         \DB::table('comentario as p')
         ->join('usuario as u', 'u.carnet', '=', 'p.usuario')
-        ->select('u.nombre as usuario','p.nombre as texto','p.post')
+        ->select('u.nombre as usuario','p.nombre as texto','p.post','p.id as id')
         ->orderBy('p.id', 'desc')
         ->get();
 
       return view('post', ['posts' => $posts,'comentarios' => $comentarios]
     );
+    }
+
+    public function edit($id,$mensaje)
+    {
+        DB::table('comentario')->where('id',$id)->update(['nombre' => $mensaje]);
+        return redirect('/posts');
     }
 }

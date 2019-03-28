@@ -61,7 +61,7 @@ Html::script('javascripts/bootstrap.min.js') !!}
 .commenterImage {
     width:30px;
     margin-right:5px;
-    height:100%;
+    /* height:100%; */
     float:left;
 }
 .commenterImage img {
